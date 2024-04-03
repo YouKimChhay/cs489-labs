@@ -1,0 +1,17 @@
+Software Requirements:
+
+- The system should allow the office manager to register new dentists.
+- The system should allow the office manager to enroll new patients.
+- The system should allow the office manager to review and book appointment requests.
+
+- The system should allow patients to submit an appointment.
+- The system should allow patients to view their appointment.
+- The system should allow patients to change or cancel their appointment.
+
+- The system should allow dentists to view a listing of all their appointments.
+
+- The system should maintain data about surgery locations.
+- The system should send confirmation emails to patients.
+- The system should verify the appointment requests:
+	- the dentist has less than 5 appointments in the given week.
+	- the patient has no outstanding or unpaid bill.
