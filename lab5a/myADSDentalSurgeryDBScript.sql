@@ -170,8 +170,7 @@ VALUES
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Display the list of ALL Dentists registered in the system, sorted in ascending
-order of their lastNames
+-- Display the list of ALL Dentists registered in the system, sorted in ascending order of their lastNames
 -- -----------------------------------------------------
 SELECT *
 FROM dentist
@@ -179,8 +178,7 @@ ORDER BY lastName;
 
 
 -- -----------------------------------------------------
--- Display the list of ALL Appointments for a given Dentist by their dentist_Id
-number. Include in the result, the Patient information.
+-- Display the list of ALL Appointments for a given Dentist by their dentist_Id number. Include in the result, the Patient information.
 -- -----------------------------------------------------
 SELECT a.id AS appointment_id, a.datetime, a.dentist_id, p.*
 FROM appointment AS a
@@ -190,8 +188,7 @@ WHERE a.dentist_id = 3;
 
 
 -- -----------------------------------------------------
--- Display the list of ALL Appointments that have been scheduled at a Surgery
-Location
+-- Display the list of ALL Appointments that have been scheduled at a Surgery Location
 -- -----------------------------------------------------
 SELECT *
 FROM appointment
