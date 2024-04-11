@@ -32,11 +32,6 @@ public class DentalSurgerySystemApplication implements CommandLineRunner {
 		populateDentists();
 		dentistService.getAllDentists().forEach(System.out::println);
 
-//		Dentist d = new Dentist(null, "Mary", "Joe", "555-123-9986", "maryj@ads.com", "dental implant");
-//		dentistService.addNewDentist(d);
-//		d.setSpecialization("dental surgeon");
-//		dentistService.updateDentistById(3L, d);
-
 		populatePatients();
 		patientService.getAllPatients().forEach(System.out::println);
 
