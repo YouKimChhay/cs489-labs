@@ -20,4 +20,11 @@ public class Address {
     private String city;
     private String state;
     private String zip;
+
+    public void updateAddress(Address updateAddress) {
+        setStreet(updateAddress.getStreet());
+        setCity(updateAddress.getCity());
+        setState(updateAddress.getState());
+        setZip(updateAddress.getZip());
+    }
 }

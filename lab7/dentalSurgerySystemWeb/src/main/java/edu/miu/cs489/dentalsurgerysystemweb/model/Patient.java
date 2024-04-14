@@ -25,4 +25,13 @@ public class Patient {
 
     @OneToOne(cascade = CascadeType.ALL)
     private Address address;
+
+    public void updatePatient(Patient updatedPatient) {
+        setFirstName(updatedPatient.getFirstName());
+        setLastName(updatedPatient.getLastName());
+        setPhone(updatedPatient.getPhone());
+        setEmail(updatedPatient.getEmail());
+        setDateOfBirth(updatedPatient.getDateOfBirth());
+        address.updateAddress(updatedPatient.getAddress());
+    }
 }

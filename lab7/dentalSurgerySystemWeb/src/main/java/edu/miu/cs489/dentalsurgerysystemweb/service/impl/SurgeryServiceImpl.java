@@ -3,6 +3,7 @@ package edu.miu.cs489.dentalsurgerysystemweb.service.impl;
 import edu.miu.cs489.dentalsurgerysystemweb.model.Surgery;
 import edu.miu.cs489.dentalsurgerysystemweb.repository.SurgeryRepository;
 import edu.miu.cs489.dentalsurgerysystemweb.service.SurgeryService;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -25,9 +26,8 @@ public class SurgeryServiceImpl implements SurgeryService {
     }
 
     @Override
-    public Surgery getSurgeryById(Long id) {
-        //check for a valid id
-        return surgeryRepository.findById(id).get();
+    public Surgery getSurgeryById(Long id) throws EntityNotFoundException {
+        return surgeryRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Surgery id "+ id + " not found."));
     }
 
     @Override

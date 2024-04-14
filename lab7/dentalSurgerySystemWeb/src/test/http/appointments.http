@@ -1,0 +1,13 @@
+### add a new appointment
+POST http://localhost:8080/adsweb/api/v1/appointments
+Content-Type: application/json
+
+{
+  "dateTime": "2024-09-21T10:00:00",
+  "dentistId": 2,
+  "patientId": 3,
+  "surgeryId": 2
+}
+
+### get all appointments
+GET http://localhost:8080/adsweb/api/v1/appointments
