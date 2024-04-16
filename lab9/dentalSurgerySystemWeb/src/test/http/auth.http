@@ -1,0 +1,66 @@
+### create a new user with role admin
+POST http://localhost:8080/ads/api/v1/auth/signup
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin123",
+  "roles": ["ADMIN"]
+}
+
+### create a new user with role dentist
+POST http://localhost:8080/ads/api/v1/auth/signup
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "john123",
+  "roles": ["DENTIST"]
+}
+
+### create a new user with role patient
+POST http://localhost:8080/ads/api/v1/auth/signup
+Content-Type: application/json
+
+{
+  "username": "mary",
+  "password": "mary123",
+  "roles": ["PATIENT"]
+}
+
+### create a new user with role patient
+POST http://localhost:8080/ads/api/v1/auth/signup
+Content-Type: application/json
+
+{
+  "username": "sarah",
+  "password": "sarah123",
+  "roles": ["PATIENT"]
+}
+
+### login as an admin
+POST http://localhost:8080/ads/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin123"
+}
+
+### login as a dentist
+POST http://localhost:8080/ads/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "john123"
+}
+
+### login as a patient
+POST http://localhost:8080/ads/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "username": "mary",
+  "password": "mary123"
+}
