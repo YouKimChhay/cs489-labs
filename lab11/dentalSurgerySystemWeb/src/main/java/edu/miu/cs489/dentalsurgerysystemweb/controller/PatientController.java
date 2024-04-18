@@ -20,7 +20,7 @@ public class PatientController {
 
     @GetMapping
     public ResponseEntity<List<Patient>> getAllPatients(@RequestParam(defaultValue = "lastName") String sortBy, @RequestParam(defaultValue = "") String searchString) {
-        if (searchString != null || !searchString.isEmpty())
+        if (searchString != null && !searchString.isEmpty())
             return ResponseEntity.ok(patientService.searchPatients(searchString));
         return ResponseEntity.ok(patientService.getAllPatients(sortBy));
     }
