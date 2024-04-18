@@ -1,0 +1,82 @@
+### get all patients include the address and sort by lastName ascendingly
+GET http://localhost:8080/adsweb/api/v1/patients
+
+### get a patient by id
+GET http://localhost:8080/adsweb/api/v1/patients/5
+
+### add a new patient
+POST http://localhost:8080/adsweb/api/v1/patients
+Content-Type: application/json
+
+{
+  "firstName": "Anna",
+  "lastName": "Brown",
+  "phone": "555-987-5566",
+  "email": "ab@gmail.com",
+  "dateOfBirth": "1988-12-13",
+  "address": {
+    "street": "1456 Walnut Avenue",
+    "city": "San Francisco",
+    "state": "CA",
+    "zip": "94101"
+  }
+}
+
+### update a patient by id (change email and address)
+PUT http://localhost:8080/adsweb/api/v1/patients/5
+Content-Type: application/json
+
+{
+  "id": 5,
+  "firstName": "Anna",
+  "lastName": "Brown",
+  "phone": "555-987-5566",
+  "email": "annab@gmail.com",
+  "dateOfBirth": "1988-12-13",
+  "address": {
+    "id": 8,
+    "street": "123 Main Street",
+    "city": "Fairfield",
+    "state": "IA",
+    "zip": "52556"
+  }
+}
+
+### update a patient by id (invalid patient id)
+PUT http://localhost:8080/adsweb/api/v1/patients/5
+Content-Type: application/json
+
+{
+  "id": 5,
+  "firstName": "Anna",
+  "lastName": "Brown",
+  "phone": "555-987-5566",
+  "email": "annab@gmail.com",
+  "dateOfBirth": "1988-12-13",
+  "address": {
+    "id": 10,
+    "street": "123 Main Street",
+    "city": "Fairfield",
+    "state": "IA",
+    "zip": "52556"
+  }
+}
+
+### delete a patient by id
+DELETE http://localhost:8080/adsweb/api/v1/patients/5
+
+### search for patients whose lastName is Bell
+GET http://localhost:8080/adsweb/api/v1/patients?searchString=Bell
+
+### search for patients whose firstName is Anna
+GET http://localhost:8080/adsweb/api/v1/patients?searchString=Anna
+
+### search for patients whose phone is 555-987-1234
+GET http://localhost:8080/adsweb/api/v1/patients?searchString=555-987-1234
+
+### search for patients whose email is jb@gmail.com
+GET http://localhost:8080/adsweb/api/v1/patients?searchString=jb@gmail.com
+
+
+### get all addresses sorted by city
+GET http://localhost:8080/adsweb/api/v1/patients/addresses
